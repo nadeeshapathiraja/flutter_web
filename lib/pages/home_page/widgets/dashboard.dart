@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webtest/pages/home_page/widgets/line_chart_card.dart';
 
 import 'activity_widget.dart';
+import 'bargraph_card.dart';
 import 'header_widget.dart';
 
 class DashBoard extends StatefulWidget {
@@ -25,6 +26,8 @@ class _DashBoardState extends State<DashBoard> {
             ActivityWidget(),
             SizedBox(height: 15),
             LineChartCard(),
+            SizedBox(height: 15),
+            BarGraphCard(),
           ],
         ),
       ),

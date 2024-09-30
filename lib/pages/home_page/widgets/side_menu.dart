@@ -31,11 +31,11 @@ class _SideMenuState extends State<SideMenu> {
     );
   }
 
-  Widget _sideMenuList(SideMenuData sideMenuListData, int Index) {
+  Widget _sideMenuList(SideMenuData sideMenuListData, int index) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          selectedIndex = Index;
+          selectedIndex = index;
         });
       },
       child: Container(
@@ -44,21 +44,21 @@ class _SideMenuState extends State<SideMenu> {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: selectedIndex == Index ? sectionColor : Colors.transparent,
+          color: selectedIndex == index ? sectionColor : Colors.transparent,
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
               Icon(
-                sideMenuListData.sideMenuList[Index].icon,
-                color: selectedIndex == Index ? blackColor : greyColor,
+                sideMenuListData.sideMenuList[index].icon,
+                color: selectedIndex == index ? blackColor : greyColor,
               ),
               const SizedBox(width: 20),
               Text(
-                sideMenuListData.sideMenuList[Index].title,
+                sideMenuListData.sideMenuList[index].title,
                 style: TextStyle(
-                  color: selectedIndex == Index ? blackColor : greyColor,
+                  color: selectedIndex == index ? blackColor : greyColor,
                 ),
               ),
             ],
