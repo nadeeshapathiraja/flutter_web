@@ -16,7 +16,7 @@ class BarGraphData {
         GraphModel(x: 5, y: 6),
       ],
     ),
-     BarGraphModel(
+    BarGraphModel(
       lable: "Product",
       color: Colors.green,
       graph: [
@@ -28,8 +28,7 @@ class BarGraphData {
         GraphModel(x: 5, y: 6),
       ],
     ),
-
-     BarGraphModel(
+    BarGraphModel(
       lable: "Employees",
       color: Colors.blueAccent,
       graph: [
@@ -38,8 +37,9 @@ class BarGraphData {
         GraphModel(x: 2, y: 7),
         GraphModel(x: 3, y: 4),
         GraphModel(x: 4, y: 8),
-        GraphModel(x: 5, y: 6),
+        GraphModel(x: 5, y: 5),
       ],
     ),
   ];
+  final bottomTitle = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 }

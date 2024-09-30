@@ -50,7 +50,41 @@ class _BarGraphCardState extends State<BarGraphCard> {
                     barGroups: _chartGroups(
                       color: barGraphdata.data[index].color,
                       points: barGraphdata.data[index].graph,
-                     ),
+                    ),
+                    borderData: FlBorderData(
+                      border: const Border(),
+                    ),
+                    titlesData: FlTitlesData(
+                      leftTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: false,
+                        ),
+                      ),
+                      rightTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: false,
+                        ),
+                      ),
+                      topTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: false,
+                        ),
+                      ),
+                      bottomTitles: AxisTitles(
+                        sideTitles: SideTitles(
+                          showTitles: true,
+                          getTitlesWidget: (double value, TitleMeta) {
+                            return Text(
+                              barGraphdata.bottomTitle[value.toInt()],
+                              style: const TextStyle(
+                                  fontSize: 11,
+                                  color: greyColor,
+                                  fontWeight: FontWeight.bold),
+                            );
+                          },
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -72,7 +106,7 @@ class _BarGraphCardState extends State<BarGraphCard> {
             barRods: [
               BarChartRodData(
                 toY: point.y,
-                width: 12,
+                width: 20,
                 color: color,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10),

@@ -28,6 +28,7 @@ class _DashBoardState extends State<DashBoard> {
             LineChartCard(),
             SizedBox(height: 15),
             BarGraphCard(),
+            SizedBox(height: 15),
           ],
         ),
       ),

@@ -4,6 +4,9 @@
         "source.organizeImports": "explicit"
     },
     "editor.formatOnSave": true,
+    "files.useExperimentalFileWatcher" : true,
+    "files.legacyWatcher": "on",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "Chrome",
+    
     
 }
