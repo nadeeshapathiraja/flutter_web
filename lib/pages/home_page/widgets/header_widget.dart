@@ -42,6 +42,7 @@ class HeaderWidget extends StatelessWidget {
               hintText: "Search",
               hintStyle: const TextStyle(
                 color: greyColor,
+                fontWeight: FontWeight.bold,
               ),
               prefixIcon: const Icon(
                 Icons.search,
