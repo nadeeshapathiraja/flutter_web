@@ -3,6 +3,8 @@ import 'package:flutter_webtest/components/custom_card.dart';
 import 'package:flutter_webtest/constants/colors.dart';
 import 'package:flutter_webtest/data/health_details.dart';
 
+import '../../../utils/responsive.dart';
+
 class ActivityWidget extends StatefulWidget {
   const ActivityWidget({super.key});
 
@@ -14,11 +16,12 @@ class _ActivityWidgetState extends State<ActivityWidget> {
   final healthModelDataList = HealthDetails();
   @override
   Widget build(BuildContext context) {
+    final bool isDesktopSize = Responsive.isDesktop(context);
     return GridView.builder(
       shrinkWrap: true,
       itemCount: healthModelDataList.heltDetailslist.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: isDesktopSize ? 4 : 2,
         crossAxisSpacing: 15,
         mainAxisSpacing: 12,
       ),

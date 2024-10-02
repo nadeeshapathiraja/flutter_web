@@ -5,6 +5,7 @@ import 'package:flutter_webtest/constants/colors.dart';
 import 'package:flutter_webtest/data/barchart_data.dart';
 
 import '../../../models/graph_model.dart';
+import '../../../utils/responsive.dart';
 
 class BarGraphCard extends StatefulWidget {
   const BarGraphCard({super.key});
@@ -16,12 +17,13 @@ class BarGraphCard extends StatefulWidget {
 class _BarGraphCardState extends State<BarGraphCard> {
   @override
   Widget build(BuildContext context) {
+    final bool isDesktopSize = Responsive.isDesktop(context);
     final barGraphdata = BarGraphData();
     return GridView.builder(
       itemCount: barGraphdata.data.length,
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: isDesktopSize ? 3 : 1,
         mainAxisSpacing: 12,
         crossAxisSpacing: 15,
         childAspectRatio: 5 / 4,
