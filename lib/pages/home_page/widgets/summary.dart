@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webtest/constants/colors.dart';
 
 import 'pie_chart.dart';
+import 'sheduled_card.dart';
 import 'summary_details.dart';
 
 class Summary extends StatefulWidget {
@@ -33,6 +34,8 @@ class _SummaryState extends State<Summary> {
             ),
             SizedBox(height: 15),
             SummaryDetails(),
+            SizedBox(height: 15),
+            SheduledWidget(),
           ],
         ),
       ),

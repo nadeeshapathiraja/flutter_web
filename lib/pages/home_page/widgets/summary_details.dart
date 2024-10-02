@@ -15,8 +15,39 @@ class _SummaryDetailsState extends State<SummaryDetails> {
     return CustomCard(
       color: lineColor,
       childWidget: Row(
-        children: const [],
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          buildDetails("Cal", "385"),
+          buildDetails("Steps", "1000"),
+          buildDetails("Distance", "7Km"),
+          buildDetails("Sleep", "7h"),
+        ],
       ),
+    );
+  }
+
+  Widget buildDetails(String key, String value) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center ,
+      children: [
+        Text(
+          key,
+          style: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w900,
+            color: greyColor,
+          ),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          value,
+          style: const TextStyle(
+            fontSize: 10,
+            fontWeight: FontWeight.bold,
+            color: greyColor,
+          ),
+        ),
+      ],
     );
   }
 }
